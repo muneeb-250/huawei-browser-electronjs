@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+
+        * {
+            font-family: 'Merriweather', 'Tahoma', 'consolas';
+        }
+
+        body {
+            overflow: hidden;
+            color: white;
+            background-color: #24292e;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .top {
+            position: absolute;
+            top: 5%;
+        }
+
+        .bottom {
+            position: absolute;
+            bottom: 2%;
+            text-align: center;
+        }
+
+        #text {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="logo.png" alt="huawei logo" height="200" width="200">
+    <h2>Huawei</h2>
+    <h1 class="top">Welcome to the most private browser</h1>
+    <div class="bottom">
+        <p>Liked the project? Give it a 🌟 on Github </p>
+        <code id="text">https://github.com/muneeb-250/huawei-browser-electronjs</code>
+    </div>
+    <script>
+        const text = document.getElementById("text");
+        text.addEventListener("click", function () {
+            const selection = window.getSelection();
+            const range = document.createRange();
+            range.selectNodeContents(text);
+            selection.removeAllRanges();
+            selection.addRange(range);
+            document.execCommand("copy");
+            selection.removeAllRanges();
+        });
+    </script>
+
+
+
+
+
+    </script>
+</body>
+
+</html>

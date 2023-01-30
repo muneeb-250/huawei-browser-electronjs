@@ -1,0 +1,16 @@
+{
+    "productName": "huawei_browser",
+    "directories": {
+        "output": "dist"
+    },
+    "win": {
+        "target": [
+            {
+                "target": "nsis",
+                "arch": [
+                    "x64"
+                ]
+            }
+        ]
+    }
+}
